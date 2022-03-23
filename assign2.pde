@@ -228,7 +228,6 @@ void keyPressed(){
       frame=0;
       hogState=GO_DOWN;}
       if(hogY>=400){hogState=STAY;}
-      print(hogY);
     break;
     
     //right
