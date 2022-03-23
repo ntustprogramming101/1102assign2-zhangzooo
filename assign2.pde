@@ -117,7 +117,7 @@ case GAME_RUN:
  
 //soil
   image(soilImg,0,160);
-
+image(groundhogImg,round(hogX),round(hogY));
   if(!right && !left && !down)
   {image(groundhogImg,hogX,hogY);}
   
