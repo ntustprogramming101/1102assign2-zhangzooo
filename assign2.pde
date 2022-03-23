@@ -103,7 +103,6 @@ case GAME_RUN:
   image(lifeImg,life1X,10);
   image(lifeImg,life2X,10);
   image(lifeImg,life3X,10);
-  image(groundhogIdle,hogX,hogY);
 
 //sun
   stroke(255,255,0);
