@@ -1,4 +1,4 @@
-PImage bgImg, groundhogImg, lifeImg, soilImg, soldierImg,
+PImage bgImg, groundhogIdle, lifeImg, soilImg, soldierImg,
 cabbage,groundhogDown, groundhogLeft, groundhogRight, startHover,
 startNormal, title, gameOver, restart, restartHover;
 
@@ -46,7 +46,7 @@ void setup() {
 
 // load the image of background, groundhog, life, and soil
   bgImg=loadImage("img/bg.jpg");
-  groundhogImg=loadImage("img/groundhog.png");
+  groundhogIdle=loadImage("img/groundhogIdle.png");
   lifeImg=loadImage("img/life.png");
   soilImg=loadImage("img/soil.png");
   soldierImg=loadImage("img/soldier.png");
@@ -103,8 +103,6 @@ case GAME_RUN:
   image(lifeImg,life1X,10);
   image(lifeImg,life2X,10);
   image(lifeImg,life3X,10);
-  image(groundhogImg,0,0);
-
 
 //sun
   stroke(255,255,0);
@@ -119,10 +117,7 @@ case GAME_RUN:
  
 //soil
   image(soilImg,0,160);
-image(groundhogImg,round(hogX),round(hogY));
-  if(!right && !left && !down)
-  {image(groundhogImg,hogX,hogY);}
-  
+
 //groundhog move  
 switch(hogState){
   case GO_RIGHT:
@@ -131,7 +126,7 @@ switch(hogState){
     hogX+=hogSpeed/15.0;
     frame++;
     if(hogX>560){hogX=560;}}
-  if(frame==15){image(groundhogImg,round(hogX),round(hogY));}
+  if(frame==15){image(groundhogIdle,round(hogX),round(hogY));}
   break; 
   
   case GO_LEFT:
@@ -140,7 +135,7 @@ switch(hogState){
     hogX-=hogSpeed/15.0;
     frame++;
     if(hogX<=0){hogX=0;}}
-  if(frame==15){image(groundhogImg,round(hogX),round(hogY));}
+  if(frame==15){image(groundhogIdle,round(hogX),round(hogY));}
   break;
       
   case GO_DOWN:    
@@ -149,12 +144,12 @@ switch(hogState){
     hogY+=hogSpeed/15.0;
     frame++;
     if(hogY>=400){hogY=400;}}
-  if(frame==15){image(groundhogImg,round(hogX),round(hogY));}
+  if(frame==15){image(groundhogIdle,round(hogX),round(hogY));}
   break;
   
   case STAY:
   frame=15;
-  image(groundhogImg,hogX,hogY);
+  image(groundhogIdle,hogX,hogY);
   break;
 }
 
@@ -254,5 +249,3 @@ void keyPressed(){
     break;
 }
 }
-
-
