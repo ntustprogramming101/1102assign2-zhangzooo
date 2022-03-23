@@ -116,6 +116,9 @@ case GAME_RUN:
  
 //soil
   image(soilImg,0,160);
+
+  if(!right && !left && !down)
+  {image(groundhogImg,hogX,hogY);}
   
 //groundhog move  
 switch(hogState){
