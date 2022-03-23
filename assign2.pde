@@ -67,6 +67,7 @@ void setup() {
 //make soldier appear at a random level
   a=floor(random(2,5));
   soldierY=80*a;
+  soldierX=-80;
   
 //cabbage  
   b=floor(random(2,6));
@@ -184,7 +185,8 @@ if( life2X<0 && hogY<cabbageY+80 && hogY+80>cabbageY
         life2X=-100;}  
   if( life2X<0 && hogY<soldierY+80 && hogY+80>soldierY
   && hogX<soldierX+80 && hogX+80>soldierX ){
-        gameState= GAME_OVER;}        
+    hogState=STAY;
+    gameState= GAME_OVER;}        
                         
 //set the position of the soldier
   image(soldierImg,soldierX,soldierY);
@@ -250,4 +252,5 @@ void keyPressed(){
     break;
 }
 }
+
 
