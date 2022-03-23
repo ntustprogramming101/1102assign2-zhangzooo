@@ -35,7 +35,7 @@ float hogSpeed;
 int life2X=80;
 int life1X=10;
 int life3X=-100;
-int frame;
+int frame=15;
 
 boolean right= false;
 boolean down= false;
@@ -78,7 +78,6 @@ void setup() {
   hogX=320;
   hogY=80;
   hogSpeed=80.0;  
-  frame=15;
 }
 
 void draw() {
@@ -248,3 +247,4 @@ void keyPressed(){
     break;
 }
 }
+
