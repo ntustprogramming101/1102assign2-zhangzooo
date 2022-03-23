@@ -149,38 +149,38 @@ switch(hogState){
   
   case STAY:
   frame=15;
-  image(groundhogIdle,hogX,hogY);
+  image(groundhogIdle,round(hogX),round(hogY));
   break;
 }
 
 
 //+life
-if( life2X>0 && hogY<cabbageY+80 && hogY+80>cabbageY &&
+if( life2X>0 && hogY<cabbageY+79 && hogY+80>cabbageY &&
     hogX<cabbageX+80 && hogX+80>cabbageX){
     life3X=150;
     cabbageX=-100;
     }
 
-if( life2X<0 && hogY<cabbageY+80 && hogY+80>cabbageY 
+if( life2X<0 && hogY<cabbageY+79 && hogY+80>cabbageY 
    && hogX<cabbageX+80 && hogX+80>cabbageX){
     life2X=80;
     cabbageX=-100;
     }   
 
 //-life    
-  if( life3X>0 && hogY<soldierY+80 && hogY+80>soldierY
+  if( life3X>0 && hogY<soldierY+79 && hogY+80>soldierY
   && hogX<soldierX+80 && hogX+80>soldierX){
         hogX=320;
         hogY=80;
         hogState=STAY;
         life3X=-100;}
-  if( life3X<0 && life2X>0 && hogY<soldierY+80 && hogY+80>soldierY &&
+  if( life3X<0 && life2X>0 && hogY<soldierY+79 && hogY+80>soldierY &&
   hogX<soldierX+80 && hogX+80>soldierX){
         hogX=320;
         hogY=80;
         hogState=STAY;
         life2X=-100;}  
-  if( life2X<0 && hogY<soldierY+80 && hogY+80>soldierY
+  if( life2X<0 && hogY<soldierY+79 && hogY+80>soldierY
   && hogX<soldierX+80 && hogX+80>soldierX ){
     hogState=STAY;
     gameState= GAME_OVER;}        
@@ -228,6 +228,7 @@ void keyPressed(){
       frame=0;
       hogState=GO_DOWN;}
       if(hogY>=400){hogState=STAY;}
+      print(hogY);
     break;
     
     //right
