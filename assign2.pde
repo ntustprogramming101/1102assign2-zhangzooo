@@ -107,13 +107,13 @@ case GAME_RUN:
 //sun
   stroke(255,255,0);
   strokeWeight(5);
-  ellipse(590,50,120,120);
   fill(253,184,19);
+  ellipse(590,50,120,120);
   
 //lawn
-  stroke(124,204,25);
-  strokeWeight(15);
-  line(0,160,640,160);
+  noStroke();
+  fill(124,204,25);
+  rect(0,160,640,-15);
  
 //soil
   image(soilImg,0,160);
