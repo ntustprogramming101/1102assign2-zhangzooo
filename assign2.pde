@@ -111,8 +111,8 @@ case GAME_RUN:
   fill(253,184,19);
   
 //lawn
+  stroke(124,204,25);
   strokeWeight(15);
-  stroke(124,204,25)
   line(0,160,640,160);
  
 //soil
