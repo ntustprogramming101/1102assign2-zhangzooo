@@ -186,7 +186,7 @@ if( life2X<0 && hogY<cabbageY+79 && hogY+79>cabbageY
     gameState= GAME_OVER;}        
                         
 //set the position of the soldier
-  image(soldierImg,soldierX,soldierY);
+  image(soldierImg,soldierX-80,soldierY);
   soldierX+=speedS;
   soldierX = soldierX %720;
  
